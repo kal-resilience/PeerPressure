@@ -1,0 +1,709 @@
+mdl 1.6;
+
+import ::adobe::annotations::*;
+import ::adobe::materials::*;
+import ::anno::*;
+import ::base::*;
+import ::state::*;
+import ::tex::gamma_mode;
+
+export material CUP1(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("CUP1_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("CUP1_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("CUP1_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("CUP1_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material CUP(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("CUP_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("CUP_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("CUP_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("CUP_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material LAMBERT9(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("LAMBERT9_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("LAMBERT9_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("LAMBERT9_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("LAMBERT9_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material LAMBERT18(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("LAMBERT18_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("LAMBERT18_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("LAMBERT18_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("LAMBERT18_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material CARPERT(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("CARPERT_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("CARPERT_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("CARPERT_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("CARPERT_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material ROBOT(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("ROBOT_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("ROBOT_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("ROBOT_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("ROBOT_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material TABLE(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("TABLE_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("TABLE_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("TABLE_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("TABLE_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material FIDGETSPINNER(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("FIDGETSPINNER_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("FIDGETSPINNER_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("FIDGETSPINNER_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("FIDGETSPINNER_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material LAMP(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("LAMP_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("LAMP_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("LAMP_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("LAMP_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material TV(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("TV_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("TV_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("TV_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("TV_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material STANDARDSURFACE5(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("STANDARDSURFACE5_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("STANDARDSURFACE5_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("STANDARDSURFACE5_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("STANDARDSURFACE5_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material STAMP(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("STAMP_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("STAMP_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("STAMP_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("STAMP_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material SHEETS(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("SHEETS_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("SHEETS_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("SHEETS_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("SHEETS_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material LAMBERT3(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("LAMBERT3_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("LAMBERT3_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("LAMBERT3_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("LAMBERT3_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material PENS2(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("PENS2_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("PENS2_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("PENS2_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("PENS2_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material FRAMES(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("FRAMES_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("FRAMES_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("FRAMES_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("FRAMES_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material LAMBERT17(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("LAMBERT17_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("LAMBERT17_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("LAMBERT17_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("LAMBERT17_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material BACKPACK(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("BACKPACK_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("BACKPACK_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("BACKPACK_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("BACKPACK_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material FLOOR1(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("FLOOR1_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("FLOOR1_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("FLOOR1_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("FLOOR1_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material CHAIR(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("CHAIR_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("CHAIR_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("CHAIR_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("CHAIR_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material FAN(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("FAN_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("FAN_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("FAN_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("FAN_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material CLOSET(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("CLOSET_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("CLOSET_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("CLOSET_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("CLOSET_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material WINDOW(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("WINDOW_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("WINDOW_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("WINDOW_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("WINDOW_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material CART(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("CART_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("CART_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("CART_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("CART_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material DOOR(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("DOOR_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("DOOR_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("DOOR_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("DOOR_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material NOTEBOOK(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("NOTEBOOK_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("NOTEBOOK_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("NOTEBOOK_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("NOTEBOOK_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material DOOR_2(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("DOOR_2_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("DOOR_2_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("DOOR_2_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("DOOR_2_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
+export material BEAR(*)
+ = ::adobe::materials::standard(
+     specular_ior :1.50000000f,
+     coat_ior :1.60000002f,
+     scatter_distance :0.50000000f,
+     base_color: ::base::file_texture(
+          texture: texture_2d("BEAR_base_color.png", ::tex::gamma_srgb),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).tint,
+     roughness: ::base::file_texture(
+          texture: texture_2d("BEAR_roughness.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     metallic: ::base::file_texture(
+          texture: texture_2d("BEAR_metallic.png", ::tex::gamma_linear),
+          mono_source: ::base::mono_average,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale())).mono,
+     normal: ::base::tangent_space_normal_texture(
+          texture: texture_2d("BEAR_normal.png", ::tex::gamma_linear),
+          flip_tangent_v: false,
+          uvw: ::base::transform_coordinate(::base::rotation_translation_scale()),
+          offset: 1.f),
+     combine_normal_and_height: false
+);
+
