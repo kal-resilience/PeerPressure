@@ -118,6 +118,7 @@ public class Player_Movement : MonoBehaviour
             rayinfo = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(rayinfo, out hitinfo, interactRange))
             {
+                Debug.Log("🎯 Raycast hit: " + hitinfo.collider.name);
                 tempInteractable = hitinfo.transform.gameObject;
                 Transform m_tempPosition = tempInteractable.GetComponent<Transform>();
                 float p_x = this.transform.position.x - m_tempPosition.position.x;
@@ -180,6 +181,7 @@ public class Player_Movement : MonoBehaviour
                     //Player can move around the scene.
                     if (Physics.Raycast(rayinfo, out hitinfo))
                     {
+                        Debug.Log("🏃 Setting destination to " + hitinfo.point);
                         agent.SetDestination(hitinfo.point);
                     }
                 }
